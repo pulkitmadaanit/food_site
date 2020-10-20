@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post"> 
+        {% csrf_token %}
+        <!-- {{form.as_p}} -->
+        
+        {% for fm in form %}
+            {{ fm.label_tag }}
+            {{ fm }}
+            {{ fm.errors|striptags }}
+            <hr>
+            <hr>
+        {% endfor %}
+            
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

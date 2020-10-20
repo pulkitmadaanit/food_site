@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+<body>
+  <h1><a href="/food/select_food">Want to see menu again</a></h1>
+  <br>
+  <div>
+  name: {{item.item_name}} <br>
+  desc: {{item.item_desc}} <br>
+  price: {{item.item_price}} <br>
+  
+  </div>  
+  <br>
+<button color='green'>Place your order</button>
+  
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+ {% extends 'base.html' %}
+
+    {% block body_block %}
+
+        {% for j in item_list  %}
+        <div class="row">
+            <div class="col-md-3 offset-md-2">
+                <img class="card" height="150px" src="{{j.item_image}}">
+            </div>
+            <div class="colmd-4">
+               Name: {{j.item_name}} <br>
+               Desc: {{j.item_desc}} <br>
+               Price: {{j.item_price}} <br>
+            </div>
+            <div class="col-md-3">
+                <a href="{% url 'details' j.id %}" class="btn btn-primary">Details</a>
+                <a href="#" class="btn btn-success">Order Now</a>
+            </div>
+            <div class="col-md-1">
+               
+            </div>
+        </div>
+    
+        {% endfor %}
+        <div class="jumbotron">
+        
+        <a href="/food/add"><h1> Want to add food of your choice</h1></a>
+        </div>
+    {% endblock %}
